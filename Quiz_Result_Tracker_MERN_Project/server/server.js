@@ -2,14 +2,11 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import crypto from "crypto";
-import fs from "fs";
 import path from "path";
-
 
 const app = express();
 app.use(cors({
   origin: ["https://quiz-track.netlify.app", "http://localhost:3000"],
-  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 app.use(express.json());
@@ -18,17 +15,11 @@ app.use(express.json());
 const mongoURL = "mongodb+srv://nithiesrana07dhoni_db_user:Nithies123@cluster0.i1ki1yf.mongodb.net/?appName=Cluster0";
 
 mongoose.connect(mongoURL, {
-  serverSelectionTimeoutMS: 30000, // Increased to 30s
-  connectTimeoutMS: 30000,        // Increased to 30s
-  socketTimeoutMS: 45000,
-  maxPoolSize: 10,
-  family: 4 
+  serverSelectionTimeoutMS: 30000, 
+  connectTimeoutMS: 30000,
 })
 .then(() => console.log("✅ MongoDB Connected Successfully"))
-.catch((err) => {
-  console.error("❌ MongoDB connection error:", err.message);
-  console.log("⚠️  Make sure IP is whitelisted in MongoDB Atlas or use local DB fallback");
-});
+.catch((err) => console.error("❌ MongoDB connection error:", err.message));
 
 // Mongoose schemas (used if Atlas is available)
 const userSchema = new mongoose.Schema({
