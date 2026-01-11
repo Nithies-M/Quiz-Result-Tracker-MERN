@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": "1768034346565",
+      "username": "Nithies",
+      "email": "nithiesvishal2005@gmail.com",
+      "password": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+      "createdAt": "2026-01-10T08:39:06.565Z"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "1768034413845",
+      "userId": "1768034346565",
+      "username": "Nithies",
+      "subject": "Computer",
+      "score": 0,
+      "totalQuestions": 20,
+      "createdAt": "2026-01-10T08:40:13.845Z"
+    },
+    {
+      "id": "1768034682534",
+      "userId": "1768034346565",
+      "username": "Nithies",
+      "subject": "Tamil",
+      "score": 8,
+      "totalQuestions": 20,
+      "createdAt": "2026-01-10T08:44:42.534Z"
+    }
+  ]
+}

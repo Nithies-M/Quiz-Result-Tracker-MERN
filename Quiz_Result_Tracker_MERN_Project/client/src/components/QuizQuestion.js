@@ -1,0 +1,93 @@
+import React from "react";
+
+// Full question pool for 3 subjects
+export const questionsPool = {
+  Maths: [
+    { question: "2 + 2?", options: ["3","4","5","6"], answer: 1 },
+    { question: "5 - 3?", options: ["1","2","3","4"], answer: 1 },
+    { question: "Square root of 49?", options:["6","7","8","9"], answer: 1 },
+    { question: "5 * 6 = ?", options:["25","30","35","40"], answer: 1 },
+    { question: "Derivative of x^3?", options:["x^2","3x^2","2x","x^3"], answer: 1 },
+    { question: "Integral of 2x dx?", options:["x^2","x^2 + C","2x^2","None"], answer: 1 },
+    { question: "10 / 2 = ?", options:["2","4","5","6"], answer: 2 },
+    { question: "7 + 8 = ?", options:["14","15","16","17"], answer: 1 },
+    { question: "12 - 7 = ?", options:["4","5","6","7"], answer: 1 },
+    { question: "2^3 = ?", options:["6","7","8","9"], answer: 2 },
+    { question: "Square root of 64?", options:["6","7","8","9"], answer: 2 },
+    { question: "3 * 9 = ?", options:["27","28","26","29"], answer: 0 },
+    { question: "Derivative of x^2?", options:["x","2x","x^2","2"], answer: 1 },
+    { question: "Integral of 3x^2 dx?", options:["x^3","x^3 + C","3x^3","None"], answer: 1 },
+    { question: "15 % 4 = ?", options:["3","4","2","1"], answer: 0 },
+    { question: "LCM of 4 and 6?", options:["12","10","8","14"], answer: 0 },
+    { question: "HCF of 12 and 18?", options:["6","4","3","2"], answer: 0 },
+    { question: "5^0 = ?", options:["1","0","5","Undefined"], answer: 0 },
+    { question: "0! = ?", options:["1","0","Undefined","Infinity"], answer: 0 },
+    { question: "Derivative of sin(x)?", options:["cos(x)","-cos(x)","sin(x)","-sin(x)"], answer: 0 }
+  ],
+
+  Computer: [
+    { question: "HTML stands for?", options:["Hyper Text Markup Language","High Text Mode Language","Home Tool Markup Language","None"], answer:0 },
+    { question: "CSS is used for?", options:["Content","Style","Structure","Logic"], answer:1 },
+    { question: "React is a ___?", options:["Library","Framework","Language","Database"], answer:0 },
+    { question: "Binary of 10?", options:["1010","1100","1001","1111"], answer:0 },
+    { question: "Big-O of binary search?", options:["O(n)","O(log n)","O(n^2)","O(1)"], answer:1 },
+    { question: "HTTP status 404 means?", options:["OK","Not Found","Server Error","Redirect"], answer:1 },
+    { question: "RAM stands for?", options:["Random Access Memory","Read And Memorize","Run And Memory","None"], answer:0 },
+    { question: "CPU is?", options:["Central Processing Unit","Computer Personal Unit","Central Power Unit","None"], answer:0 },
+    { question: "First programming language?", options:["C","Fortran","Python","Java"], answer:1 },
+    { question: "JavaScript is used for?", options:["Backend","Frontend","Database","Networking"], answer:1 },
+    { question: "Operating System example?", options:["Linux","Python","HTML","CSS"], answer:0 },
+    { question: "SQL stands for?", options:["Structured Query Language","Simple Query Language","Sequential Query Language","Standard Query Language"], answer:0 },
+    { question: "Boolean values?", options:["Yes/No","0/1","True/False","All"], answer:2 },
+    { question: "CSS property for color?", options:["color","font-color","text-color","bg-color"], answer:0 },
+    { question: "HTML tag for paragraph?", options:["<p>","<para>","<h1>","<div>"], answer:0 },
+    { question: "Git is for?", options:["Version Control","Database","Frontend","Backend"], answer:0 },
+    { question: "Python uses ___ indentation", options:["Curly","Tab","None","Both"], answer:1 },
+    { question: "HTTP stands for?", options:["Hyper Text Transfer Protocol","High Text Transfer Protocol","Hyper Tool Transfer Protocol","None"], answer:0 },
+    { question: "DNS is?", options:["Domain Name System","Data Name Server","Domain Name Service","None"], answer:0 },
+    { question: "Framework example?", options:["React","Python","C++","HTML"], answer:0 }
+  ],
+
+  Tamil: [
+    { question: "தமிழ் மொழி எந்த நாட்டின்?", options:["India","Sri Lanka","Malaysia","All"], answer:3 },
+    { question: "தமிழ் எத்தனை எழுத்துகள் கொண்டது?", options:["247","248","250","246"], answer:0 },
+    { question: "தமிழ் இலக்கியம் ஆரம்பமானது எப்போது?", options:["2nd century BC","1st century AD","5th century AD","10th century AD"], answer:0 },
+    { question: "பட்டியல் இலக்கியத்தின் முக்கிய பாகம்?", options:["கவிதை","நாடகம்","கதை","எல்லாம்"], answer:3 },
+    { question: "சிலப்பதிகாரம் எழுதியவர்?", options:["Ilango Adigal","Thiruvalluvar","Kambar","Bharathiyar"], answer:0 },
+    { question: "தமிழ் சங்ககாலம் எப்போது?", options:["500 BC - 200 AD","200 BC - 100 AD","100 AD - 500 AD","None"], answer:0 },
+    { question: "தமிழ் தேசிய பாடல்?", options:["தேசிய பாடல் இல்லை","சிந்தாமணி","தேமாழி","பாரதியார்"], answer:2 },
+    { question: "திருக்குறள் எழுதியவர்?", options:["Bharathiyar","Ilango Adigal","Thiruvalluvar","Kambar"], answer:2 },
+    { question: "தமிழ் மொழி நாடு?", options:["India","Sri Lanka","Malaysia","All"], answer:3 },
+    { question: "தமிழ் வார்த்தை அமைப்பு?", options:["பெயர்","செயல்","பெயர்ச்சொல்","எல்லாம்"], answer:3 },
+    { question: "தமிழ் இலக்கியம் பாகம்?", options:["கவிதை","நாடகம்","கதை","எல்லாம்"], answer:3 },
+    { question: "தமிழ் எழுத்து எழுதி?", options:["A-Z","அ-ஔ","0-9","None"], answer:1 },
+    { question: "தமிழ் இசை வகை?", options:["பாரம்பரியம்","பல்வேறு","குறிப்பு","எல்லாம்"], answer:3 },
+    { question: "தமிழ் பாடல் வகை?", options:["கவிதை","நாடகம்","கதை","எல்லாம்"], answer:3 },
+    { question: "தமிழ் மொழி எழுத்துக்கள்?", options:["247","248","249","246"], answer:0 },
+    { question: "தமிழ் பழமொழி?", options:["அறம், பண்பு","பண்பு, கலை","அறம், அறிவு","None"], answer:0 },
+    { question: "தமிழ் கல்வி நூல்?", options:["திருக்குறள்","சிலப்பதிகாரம்","பாரதியார் பாடல்கள்","எல்லாம்"], answer:3 },
+    { question: "தமிழ் நாடகம்?", options:["கச்சேரி","நாடகம்","பாடல்","நாடகம்"], answer:3 },
+    { question: "தமிழ் கவிதை?", options:["சுந்தர","மிகவும்","நல்ல","அரிது"], answer:2 },
+    { question: "தமிழ் சங்க இலக்கியம்?", options:["முதல் சங்க","மூன்றாம் சங்க","இரண்டாம் சங்க","None"], answer:0 }
+  ]
+};
+
+// Component to show single question
+export default function QuizQuestion({ q, selected, setSelected }) {
+  return (
+    <div className="quiz-question">
+      <h3>❓ {q.question}</h3>
+      <div className="options">
+        {q.options.map((opt, i) => (
+          <button
+            key={i}
+            className={selected === i ? "selected" : ""}
+            onClick={() => setSelected(i)}
+          >
+            {opt} {selected === i ? "✅" : ""}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
