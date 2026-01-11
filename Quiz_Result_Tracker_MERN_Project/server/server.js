@@ -7,18 +7,22 @@ import path from "path";
 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["https://quiz-track.netlify.app", "http://localhost:3000"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 // Try to connect to MongoDB Atlas first. If not available, we'll use a local JSON fallback.
 const mongoURL = "mongodb+srv://nithiesrana07dhoni_db_user:Nithies123@cluster0.i1ki1yf.mongodb.net/?appName=Cluster0";
 
 mongoose.connect(mongoURL, {
-  serverSelectionTimeoutMS: 10000,
-  connectTimeoutMS: 10000,
+  serverSelectionTimeoutMS: 30000, // Increased to 30s
+  connectTimeoutMS: 30000,        // Increased to 30s
   socketTimeoutMS: 45000,
   maxPoolSize: 10,
-  family: 4 // Use IPv4
+  family: 4 
 })
 .then(() => console.log("✅ MongoDB Connected Successfully"))
 .catch((err) => {
@@ -288,4 +292,4 @@ app.listen(5000, () => {
   console.log("🚀 Server running on https://quiz-result-tracker-mern.vercel.app");
 });
 // Export the app for Vercel
-module.exports = app;
+export default app;
