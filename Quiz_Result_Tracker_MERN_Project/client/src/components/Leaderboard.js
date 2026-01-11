@@ -5,7 +5,7 @@ export default function Leaderboard(props) {
   const [subject, setSubject] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/leaderboard?subject=${subject}`)
+    fetch(`https://quiz-result-tracker-mern.vercel.app/api/leaderboard?subject=${subject}`)
       .then(res => res.json())
       .then(result => {
         if (Array.isArray(result)) {

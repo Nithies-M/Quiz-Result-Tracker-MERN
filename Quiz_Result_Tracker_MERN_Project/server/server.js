@@ -5,12 +5,13 @@ import crypto from "crypto";
 import fs from "fs";
 import path from "path";
 
+
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 // Try to connect to MongoDB Atlas first. If not available, we'll use a local JSON fallback.
-const mongoURL = "mongodb+srv://rpvishalsahar_db_user:Vishal123@cluster.y7tbbcq.mongodb.net/quizDB?retryWrites=true&w=majority";
+const mongoURL = "mongodb+srv://nithiesrana07dhoni_db_user:Nithies123@cluster0.i1ki1yf.mongodb.net/?appName=Cluster0";
 
 mongoose.connect(mongoURL, {
   serverSelectionTimeoutMS: 10000,
@@ -38,7 +39,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 
 const quizSchema = new mongoose.Schema({
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  userId: { type: String },
   username: String,
   subject: String,
   score: Number,
@@ -284,5 +285,7 @@ app.get("/api/leaderboard", async (req, res) => {
 });
 
 app.listen(5000, () => {
-  console.log("🚀 Server running on http://localhost:5000");
+  console.log("🚀 Server running on https://quiz-result-tracker-mern.vercel.app");
 });
+// Export the app for Vercel
+module.exports = app;

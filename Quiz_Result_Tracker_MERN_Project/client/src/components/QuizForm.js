@@ -31,7 +31,7 @@ export default function QuizForm({ userId, username }) {
 
   const submitScore = async () => {
     try {
-      await fetch("http://localhost:5000/api/quiz", {
+      await fetch("https://quiz-result-tracker-mern.vercel.app/api/quiz", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

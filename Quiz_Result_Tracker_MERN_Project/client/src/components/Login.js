@@ -29,7 +29,7 @@ export default function Login({ onLoginSuccess }) {
         ? { username, password }
         : { username, email, password, confirmPassword };
 
-      const response = await fetch(`http://localhost:5000${endpoint}`, {
+      const response = await fetch(`https://quiz-result-tracker-mern.vercel.app${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
@@ -71,7 +71,7 @@ export default function Login({ onLoginSuccess }) {
     setResetMessage("");
     setResetLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/auth/request-reset', {
+      const response = await fetch('https://quiz-result-tracker-mern.vercel.app/api/auth/request-reset', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: resetUsername, email: resetUsername })
@@ -106,7 +106,7 @@ export default function Login({ onLoginSuccess }) {
     }
     setResetLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/auth/reset-password', {
+      const response = await fetch('https://quiz-result-tracker-mern.vercel.app/api/auth/reset-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token: resetToken, newPassword, confirmPassword: confirmNewPassword })
